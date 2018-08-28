@@ -14,6 +14,10 @@ class Api::WorkoutsController < ApplicationController
       # render json: {message: "There's a problem getting your flex on. Please try again!"}
     end
   end
-  
+
+  def show
+    @workout = Workout.find(params[:id])
+    render json: @workout
+  end
 
 end
