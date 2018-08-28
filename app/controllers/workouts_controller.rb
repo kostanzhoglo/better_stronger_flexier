@@ -20,4 +20,10 @@ class Api::WorkoutsController < ApplicationController
     render json: @workout
   end
 
+  private
+
+    def workout_params
+      params.require(:workout).permit(:name, :content, :completions)
+    end
+
 end
