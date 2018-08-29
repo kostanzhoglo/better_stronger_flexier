@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Hello from './components/Hello';
+import Navbar from './components/Navbar';
+import TipsPage from './containers/TipsPage';
+import WorkoutsPage from './containers/WorkoutsPage';
 
 class App extends Component {
   render() {
@@ -20,7 +24,7 @@ class App extends Component {
 
           </p>
         </div>
-    </Router>
+      </Router>
     );
   }
 }
