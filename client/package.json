@@ -11,8 +11,7 @@
     "react-redux": "^5.0.7",
     "redux-thunk": "^2.3.0",
     "react-router-dom": "^4.3.1",
-    "compose": "^0.1.2",
-    
+    "compose": "^0.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
