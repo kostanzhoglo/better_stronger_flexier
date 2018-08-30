@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Navbar extends Component {
   render() {
     return (
-      "Hello"
+      "I'm the Navbar!"
     )
   }
 
