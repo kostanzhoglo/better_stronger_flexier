@@ -6,7 +6,7 @@ class Navbar extends Component {
 
     const link = {
       width: '100px',
-      padding: '12px',
+      padding: '4px',
       margin: '0 6px 6px',
       background: 'pink',
       textDecoration: 'none',
@@ -21,7 +21,7 @@ class Navbar extends Component {
           style={link}
           activeStyle={{
             background: 'darkblue',
-            color: 'red'
+            color: 'white'
         }}>
           Home
         </NavLink>
@@ -31,7 +31,7 @@ class Navbar extends Component {
           style={link}
           activeStyle={{
             background: 'darkblue',
-            color: 'red'
+            color: 'white'
         }}>
           Workout Tips
         </NavLink>
@@ -41,7 +41,7 @@ class Navbar extends Component {
           style={link}
           activeStyle={{
             background: 'darkblue',
-            color: 'red'
+            color: 'white'
         }}>
           Workouts
         </NavLink>
