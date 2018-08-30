@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 
 class WorkoutsPage extends Component {
   render() {
+      const work = "Work It Out!!!"
     return (
-      "WORK IT OUT"
+
+      <div>
+        <p>
+          WORK IT OUT
+        </p>
+        {work}
+      </div>
     )
   }
 

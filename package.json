@@ -1,0 +1,35 @@
+{
+  "name": "better_stronger_flexier",
+  "version": "1.0.0",
+  "description": "React-Redux project connected to Rails API",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "compose": "^0.1.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^1.1.5",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kostanzhoglo/better_stronger_flexier.git"
+  },
+  "author": "Jeff Withers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kostanzhoglo/better_stronger_flexier/issues"
+  },
+  "homepage": "https://github.com/kostanzhoglo/better_stronger_flexier#readme"
+}
