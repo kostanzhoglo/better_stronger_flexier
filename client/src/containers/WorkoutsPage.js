@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Workout from '../components/Workout';
+import { Row } from 'react-materialize';
 
 class WorkoutsPage extends Component {
   constructor(props) {
@@ -8,7 +10,15 @@ class WorkoutsPage extends Component {
       workouts: [
         {
           name: 'chest',
-          content: 'pushups 4sets x 12reps, \n neck stretch 1x'
+          content: 'pushups 4sets x 12reps, neck stretch 1x'
+        },
+        {
+          name: 'cardio',
+          content: 'jump rope 5 minutes, hamstring stretch'
+        },
+        {
+          name: 'back',
+          content: 'pullups 5sets, 6-6-4-3-2, 1-arm row 4sets x 8 reps, wrist strength 1set x 15'
         }
       ]
     }
@@ -16,13 +26,13 @@ class WorkoutsPage extends Component {
 
   render() {
       const workouts = this.state.workouts.map(workout => (
-        <Workout name={workout.name} content={workout.content} />
+        <Workout title={workout.name} content={workout.content} />
       ))
     return (
 
       <div>
         <p>
-          WORK IT OUT
+          Workouts
         </p>
         {workouts}
       </div>

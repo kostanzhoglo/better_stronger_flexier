@@ -12,6 +12,7 @@ class App extends Component {
   render() {
     return (
       <Router>
+        {/* <div> */}
         <div className="App">
           <Navbar />
           <header className="App-header">
@@ -19,11 +20,11 @@ class App extends Component {
               Better, Stronger, Flexier!
             </h1>
           </header>
-          <p className="App-intro">
+          {/* <p className="App-intro"> */}
             <Route exact path="/" component={Hello} />
             <Route exact path="/tips" component={TipsPage} />
             <Route path="/workouts" component={WorkoutsPage} />
-          </p>
+          {/* </p> */}
         </div>
       </Router>
     );
