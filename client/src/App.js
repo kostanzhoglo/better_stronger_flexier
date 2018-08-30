@@ -6,6 +6,7 @@ import Hello from './components/Hello';
 import Navbar from './components/Navbar';
 import TipsPage from './containers/TipsPage';
 import WorkoutsPage from './containers/WorkoutsPage';
+import './bootstrap-reboot.css';
 
 class App extends Component {
   render() {
