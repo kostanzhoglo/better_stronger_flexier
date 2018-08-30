@@ -14,14 +14,14 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <header className="App-header">
-            <h1 className="App-title">Welcome to Better, Stronger, Flexier!</h1>
+            <h1 className="App-title">
+              Better, Stronger, Flexier!
+            </h1>
+          </header>
+          <p className="App-intro">
             <Route exact path="/" component={Hello} />
             <Route exact path="/tips" component={TipsPage} />
             <Route path="/workouts" component={WorkoutsPage} />
-
-          </header>
-          <p className="App-intro">
-
           </p>
         </div>
       </Router>
