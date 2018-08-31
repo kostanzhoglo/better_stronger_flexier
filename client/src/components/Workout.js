@@ -6,7 +6,7 @@ const Workout = props => {
   return (
     <div>
         <Col s={2}><h4>{props.title}</h4></Col>
-        <Col s={2}>{props.content}</Col>
+        {/* <Col s={2}>{props.content}</Col> */}
     </div>
   )
 }

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Workout from '../components/Workout';
 import { Row } from 'react-materialize';
-import CreateWorkoutForm from './CreateWorkoutForm'
+import CreateWorkoutForm from './CreateWorkoutForm';
+import { getWorkouts } from '../actions/workouts';
+import { connect } from 'react-redux';
+
 
 class WorkoutsPage extends Component {
   constructor(props) {
@@ -25,6 +28,10 @@ class WorkoutsPage extends Component {
     }
   };
 
+  componentDidMount() {
+    this.props.getWorkouts()
+  }
+
   render() {
       const workouts = this.state.workouts.map(workout => (
         <Workout title={workout.name} content={workout.content} />
@@ -42,4 +49,10 @@ class WorkoutsPage extends Component {
 
 }
 
-export default WorkoutsPage;
+const mapStateTopProps = state => {
+  return {
+    workouts: state.workouts
+  }
+}
+
+export default connect(mapStateToProps, { getWorkouts })(WorkoutsPage);
