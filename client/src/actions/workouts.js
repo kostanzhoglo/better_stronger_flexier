@@ -15,3 +15,12 @@ export function addWorkout (workout) {
       .then(workoutsResponse => dispatch({ type: 'CREATE_WORKOUT', workouts: workoutsResponse }));
   }
 }
+
+export function getWorkouts () {
+  return (dispatch) => {
+    dispatch({ type: 'LOADING_POSTS' });
+    return fetch('http://localhost:3000/api/workouts')
+      .then(response => response.json())
+      .then(workoutsResponse => {dispatch({ type: 'GET_WORKOUTS', workouts: workoutsResponse })});
+  }
+}
