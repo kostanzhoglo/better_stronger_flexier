@@ -35,3 +35,5 @@ class CreateWorkoutForm extends Component {
     )
   }
 }
+
+export default connect(null, { addWorkout })(CreateWorkoutForm)

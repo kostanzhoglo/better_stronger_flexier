@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Workout from '../components/Workout';
 import { Row } from 'react-materialize';
+import CreateWorkoutForm from './CreateWorkoutForm'
 
 class WorkoutsPage extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class WorkoutsPage extends Component {
 
       <div>
         <p>
-          Workouts
+          <CreateWorkoutForm />
         </p>
         {workouts}
       </div>
