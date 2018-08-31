@@ -49,7 +49,7 @@ class WorkoutsPage extends Component {
 
 }
 
-const mapStateTopProps = state => {
+const mapStateToProps = state => {
   return {
     workouts: state.workouts
   }
