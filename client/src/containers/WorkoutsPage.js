@@ -4,7 +4,7 @@ import { Row } from 'react-materialize';
 import CreateWorkoutForm from './CreateWorkoutForm';
 import { getWorkouts } from '../actions/workouts';
 import { connect } from 'react-redux';
-import WorkoutLink from '../components/WorkoutLink';
+import WorkoutLinks from '../components/WorkoutLinks';
 
 
 class WorkoutsPage extends Component {
@@ -37,9 +37,10 @@ class WorkoutsPage extends Component {
       // const workouts = this.state.workouts.map(workout => (
       //   <Workout title={workout.name} content={workout.content} />
       // ))
-      const workoutsDeux = this.props.workouts.map(realWorkout => (
-        <WorkoutLink workout={realWorkout} />
-      ))
+      debugger
+      // const workoutsDeux = this.props.workouts.map(workout => (
+      //   <WorkoutLinks workout={workout} />
+      // ))
     return (
 
       <div>
@@ -50,7 +51,8 @@ class WorkoutsPage extends Component {
         <p>
           Previous Workouts:
         </p>
-
+          {/* <WorkoutLinks workouts={this.props.workouts} /> */}
+          {/* {workoutsDeux} */}
 
       </div>
     )
