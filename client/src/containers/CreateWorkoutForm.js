@@ -13,18 +13,47 @@ class CreateWorkoutForm extends Component {
     }
   }
 
+  handleChange = e => {
+    // console.log(e.target.value)
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+    this.props.addWorkout({...this.state, completions: 0});
+    this.setState({
+      name: '',
+      content: '',
+      completions: ''
+    })
+  }
+
   render() {
     return (
       <div>
         <h2>Create a New Workout</h2>
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <p>
               <label>Workout Name:</label>
-              <input type="text" id="name" name="name" />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={this.state.name}
+                onChange={this.handleChange}
+              />
             </p>
             <p>
               <label>Exercises / Stretches:</label>
-              <textarea name="content" rows="20" cols="40"></textarea>
+              <textarea
+                rows="20"
+                cols="35"
+                name="content"
+                value={this.state.content}
+                onChange={this.handleChange}
+              >
+              </textarea>
             </p>
             <p>
               <button type="submit">Add Workout</button>
