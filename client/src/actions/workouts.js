@@ -8,8 +8,6 @@ export function addWorkout (workout) {
     },
     body: JSON.stringify({ workout: workout })
   }
-
-
   return (dispatch) => {
     dispatch({ type: 'ADDING_WORKOUT' });
     return fetch(`http://localhost:3000/api/workouts`, request)

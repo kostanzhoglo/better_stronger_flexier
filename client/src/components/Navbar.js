@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-class Navbar extends Component {
-  render() {
+const Navbar = props => {
 
     const link = {
       width: '100px',
@@ -47,7 +46,7 @@ class Navbar extends Component {
         </NavLink>
       </div>
     )
-  }
+  
 
 }
 
