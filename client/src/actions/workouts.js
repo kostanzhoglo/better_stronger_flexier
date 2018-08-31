@@ -18,7 +18,7 @@ export function addWorkout (workout) {
 
 export function getWorkouts () {
   return (dispatch) => {
-    dispatch({ type: 'LOADING_POSTS' });
+    dispatch({ type: 'LOADING_WORKOUTS' });
     return fetch('http://localhost:3000/api/workouts')
       .then(response => response.json())
       .then(workoutsResponse => {dispatch({ type: 'GET_WORKOUTS', workouts: workoutsResponse })});
