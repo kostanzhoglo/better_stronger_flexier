@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Hello extends Component {
-  render() {
+const Hello = () => {
     return (
       <div>
         Welcome to Better, Stronger, Flexier
@@ -16,7 +15,7 @@ class Hello extends Component {
         </p>
       </div>
     )
-  }
+
 
 }
 
