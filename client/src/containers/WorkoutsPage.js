@@ -42,17 +42,11 @@ class WorkoutsPage extends Component {
       //   <WorkoutLinks workout={workout} />
       // ))
     return (
-
       <div>
-        {this.props.loading ? (
-          <Patience />
-        ) : (
           <p>
             <CreateWorkoutForm />
             <WorkoutLinks workouts={this.props.workouts} />
           </p>
-
-        )}
       </div>
     )
   }

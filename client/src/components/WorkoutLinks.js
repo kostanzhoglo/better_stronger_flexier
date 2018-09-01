@@ -2,32 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const WorkoutLinks = ({ workouts }) => {
-
-  if (workouts) {
-    const workoutLinks = workouts.map((workout, index) => {
-    return (
-      <div>
-          <div key={workout.id}>
-            <Link
-              to={`/workouts/${workout.id}`}
-            >
-              {workout.name}
-            </Link>
-          </div>
-      </div>
-    )})
-  } else {
-    return null;
-  }
+  let workoutLinks = workouts.workouts.map((workout, index) => {
+    return <div key={workout.id}><Link to={`/workouts/${workout.id}`}>{workout.name}</Link></div>
+  })
+  return (
+    <div>
+      <h2>Previous Workouts:</h2>
+      {workoutLinks}
+    </div>
+  )
 }
 
+
 export default WorkoutLinks;
-
-
-{/* <div key={props.workout.id}>
-  <Link
-    to={`/workouts/${props.workout.id}`}
-  >
-    {props.workout.name}
-  </Link>
-</div> */}
