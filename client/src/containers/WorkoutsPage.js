@@ -5,11 +5,12 @@ import CreateWorkoutForm from './CreateWorkoutForm';
 import { getWorkouts } from '../actions/workouts';
 import { connect } from 'react-redux';
 import WorkoutLinks from '../components/WorkoutLinks';
+import Patience from '../components/Patience';
 
 
 class WorkoutsPage extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
   //   this.state = {
   //     workouts: [
@@ -27,7 +28,7 @@ class WorkoutsPage extends Component {
   //       }
   //     ]
   //   }
-  };
+  // };
 
   componentDidMount() {
     this.props.getWorkouts()
@@ -37,23 +38,21 @@ class WorkoutsPage extends Component {
       // const workouts = this.state.workouts.map(workout => (
       //   <Workout title={workout.name} content={workout.content} />
       // ))
-      debugger
-      // const workoutsDeux = this.props.workouts.map(workout => (
+      // const workouts = this.props.workouts.map(workout => (
       //   <WorkoutLinks workout={workout} />
       // ))
     return (
 
       <div>
-        <p>
-          <CreateWorkoutForm />
-        </p>
-        {/* {workouts} */}
-        <p>
-          Previous Workouts:
-        </p>
-          {/* <WorkoutLinks workouts={this.props.workouts} /> */}
-          {/* {workoutsDeux} */}
+        {this.props.loading ? (
+          <Patience />
+        ) : (
+          <p>
+            <CreateWorkoutForm />
+            <WorkoutLinks workouts={this.props.workouts} />
+          </p>
 
+        )}
       </div>
     )
   }
@@ -67,3 +66,6 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, { getWorkouts })(WorkoutsPage);
+
+{/* <WorkoutLinks workouts={this.props.workouts} /> */}
+{/* {workouts} */}
