@@ -1,4 +1,6 @@
-export default function workoutsReducer (state = {loading: false, workouts: []}, action) {
+export default function workoutsReducer(state = {
+  loading: false, workouts: []
+}, action) {
 
   switch (action.type) {
     case 'ADDING_WORKOUT':

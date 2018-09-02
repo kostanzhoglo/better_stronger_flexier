@@ -27,9 +27,7 @@ class WorkoutsPage extends Component {
 }
 
 const mapStateToProps = state => {
-  return {
-    workouts: state.workouts
-  }
+  return {workouts: state.workouts}
 }
 
 export default connect(mapStateToProps, { getWorkouts })(WorkoutsPage);

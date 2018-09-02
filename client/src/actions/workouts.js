@@ -17,10 +17,10 @@ export function addWorkout (workout) {
 }
 
 export function getWorkouts () {
-  return (dispatch) => {
+  return(dispatch) => {
     dispatch({ type: 'LOADING_WORKOUTS' });
-    return fetch('http://localhost:3000/api/workouts')
+    return fetch('http://localhost:3001/api/workouts')
       .then(response => response.json())
-      .then(workoutsResponse => {dispatch({ type: 'GET_WORKOUTS', workouts: workoutsResponse.workouts })});
+      .then(workoutsResp => {dispatch({ type: 'GET_WORKOUTS', workouts: workoutsResp.workouts })});
   }
 }
