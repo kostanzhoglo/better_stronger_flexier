@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const WorkoutLinks = ({ workouts }) => {
-  let workoutLinks = workouts.workouts.map((workout, index) => {
+  debugger
+  let workoutLinks = workouts.map((workout, index) => {
     return <div key={workout.id}><Link to={`/workouts/${workout.id}`}>{workout.name}</Link></div>
   })
   return (
