@@ -10,13 +10,11 @@ import Patience from '../components/Patience';
 
 class WorkoutsPage extends Component {
 
-
   componentDidMount() {
     this.props.getWorkouts()
   }
 
   render() {
-
     return (
       <div>
           <p>
@@ -26,7 +24,6 @@ class WorkoutsPage extends Component {
       </div>
     )
   }
-
 }
 
 const mapStateToProps = state => {
