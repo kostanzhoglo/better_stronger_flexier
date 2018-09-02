@@ -1,18 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const WorkoutLinks = ({ workouts }) => {
-  debugger
-  let workoutLinks = workouts.map((workout, index) => {
-    return <div key={workout.id}><Link to={`/workouts/${workout.id}`}>{workout.name}</Link></div>
-  })
+const WorkoutLinks = (props) => {
+
+//   debugger
+//   if (props) {
+//     let workoutLinks = props.workouts.map((workout, index) => {
+//       return <div key={workout.id}><Link to={`/workouts/${workout.id}`}>{workout.name}</Link></div>
+//     })
+//     return (
+//       <div>
+//         <h2>Previous Workouts:</h2>
+//         {workoutLinks}
+//       </div>
+//     )
+//   } else {
+//     return null;
+//   }
+// }
+
   return (
-    <div>
-      <h2>Previous Workouts:</h2>
-      {workoutLinks}
-    </div>
+    <div>Help me</div>
   )
 }
-
 
 export default WorkoutLinks;
