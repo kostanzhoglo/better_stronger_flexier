@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const WorkoutLinks = (props) => {
-
   if (props.workouts.length > 0) {
-    let workoutLinks = props.workouts.map((workout, index) => {
+    let workoutLinks = props.workouts.map((workout) => {
       return <div key={workout.id}><Link                  to={`/workouts/${workout.id}`}>{workout.name}</Link></div>
     })
     return (
@@ -21,10 +20,5 @@ const WorkoutLinks = (props) => {
   )
   }
 }
-
-//   return (
-//     <div>Help me</div>
-//   )
-// }
 
 export default WorkoutLinks;

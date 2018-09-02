@@ -11,7 +11,7 @@ export default function workoutsReducer(state = {
     case 'LOADING_WORKOUTS':
       return {...state, loading: true}
     case 'GET_WORKOUTS':
-      return {workouts: action.workouts, loading: false}
+      return {loading: false, workouts: action.workouts}
     default:
       return state;
   }

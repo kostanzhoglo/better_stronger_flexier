@@ -16,16 +16,23 @@ export function addWorkout (workout) {
   }
 }
 
+// export function getWorkouts() {
+//   return (dispatch) => {
+//     dispatch({ type: 'LOADING_WORKOUTS' });
+//     return fetch('http://localhost:3000/api/workouts')
+//       .then(response => response.json())
+//       .then(workoutsResp => dispatch({ type: 'GET_WORKOUTS', workouts: workoutsResp.workouts }));
+//   }
+// }
+
 export function getWorkouts() {
-  return(dispatch) => {
-    dispatch({ type: 'LOADING_WORKOUTS' });
-    return fetch('http://localhost:3000/api/workouts', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      }
-    })
-      .then(response => response.json())
-      .then(workoutsResp => dispatch({ type: 'GET_WORKOUTS', workouts: workoutsResp.workouts }));
-  }
+   return (dispatch) => {
+      dispatch({ type: 'LOADING_WORKOUTS' });
+      return fetch('http://localhost:3000/api/workouts')
+         .then(response => response.json())
+         .then(workoutsResp => {
+            console.log(workoutsResp)
+            dispatch({ type: 'GET_WORKOUTS', workouts: workoutsResp })
+         });
+   }
 }
