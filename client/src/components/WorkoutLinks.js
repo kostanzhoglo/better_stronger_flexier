@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const WorkoutLinks = (props) => {
+  console.log(props)
   if (props.workouts.length > 0) {
     let workoutLinks = props.workouts.map((workout) => {
       return <div key={workout.id}><Link                  to={`/workouts/${workout.id}`}>{workout.name}</Link></div>
