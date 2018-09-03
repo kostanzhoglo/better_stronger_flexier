@@ -18,7 +18,6 @@ class WorkoutsPage extends Component {
     return (
       <div>
           <p>
-            <CreateWorkoutForm />
             <WorkoutLinks workouts={this.props.workouts} />
           </p>
       </div>

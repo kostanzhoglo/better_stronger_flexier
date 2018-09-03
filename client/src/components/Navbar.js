@@ -44,9 +44,19 @@ const Navbar = props => {
         }}>
           Workouts
         </NavLink>
+        <NavLink
+          to="/workouts/new"
+          exact
+          style={link}
+          activeStyle={{
+            background: 'darkblue',
+            color: 'white'
+        }}>
+          NEW Workout
+        </NavLink>
       </div>
     )
-  
+
 
 }
 

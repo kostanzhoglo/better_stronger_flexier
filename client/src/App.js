@@ -6,6 +6,7 @@ import Hello from './components/Hello';
 import Navbar from './components/Navbar';
 import TipsPage from './containers/TipsPage';
 import WorkoutsPage from './containers/WorkoutsPage';
+import CreateWorkoutForm from './containers/CreateWorkoutForm';
 import './bootstrap-reboot.css';
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
           {/* <p className="App-intro"> */}
             <Route exact path="/" component={Hello} />
             <Route exact path="/tips" component={TipsPage} />
+            <Route exact path="/workouts/new" component={CreateWorkoutForm} />
             <Route path="/workouts" component={WorkoutsPage} />
           {/* </p> */}
         </div>
