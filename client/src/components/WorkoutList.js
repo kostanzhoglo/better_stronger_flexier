@@ -1,18 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+import Workout from './Workout';
 
 const WorkoutList = ({ workouts }) => {
   // console.log(workouts)
   if (workouts.length > 0) {
     let workoutLinks = workouts.map((workout) => {
-      return <div>
-          <Link
-            key={workout.id}
-            to={`/workouts/${workout.id}`}>
-            {workout.name}
-          </Link>
+      return (
+        <div>
+          <div key={workout.id}>
+            <Link
+              to={`/workouts/${workout.id}`}>
+              {workout.name}
+            </Link>
+          </div>
+          <Route path={`/workouts/:workoutId`} component={Workout} />
         </div>
-    })
+    )})
 
     return (
       <div>

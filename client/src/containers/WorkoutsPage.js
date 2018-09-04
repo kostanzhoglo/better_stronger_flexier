@@ -23,10 +23,6 @@ class WorkoutsPage extends Component {
         <div>
             <p>
               <WorkoutList workouts={this.props.workouts} />
-              <Switch>
-                <Route path={`${this.props.match.url}/new`} component={CreateWorkoutForm} />
-                <Route path={`${this.props.match.url}/:workoutId`} component={WorkoutPage} />
-              </Switch>
             </p>
         </div> )
   }
