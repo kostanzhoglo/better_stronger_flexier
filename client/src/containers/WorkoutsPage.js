@@ -23,14 +23,21 @@ class WorkoutsPage extends Component {
         <div>
             <p>
               <WorkoutList workouts={this.props.workouts} />
+              <Switch>
+                <Route path={`${this.props.match.url}/new`} component={CreateWorkoutForm} />
+                <Route path={`${this.props.match.url}/:workoutId`} component={WorkoutPage} />
+              </Switch>
             </p>
         </div> )
   }
 }
 
 const mapStateToProps = state => {
-  console.log(state)
+  // console.log(state)
   return {workouts: state.allWorkouts.workouts}
 }
 
 export default connect(mapStateToProps, { getWorkouts })(WorkoutsPage);
+
+
+          // <WorkoutPage allworkouts={this.props.workouts} />
