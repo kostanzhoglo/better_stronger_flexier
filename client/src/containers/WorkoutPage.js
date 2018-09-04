@@ -7,11 +7,22 @@ class WorkoutPage extends Component {
 
     return (
       <div>
-        <Workout />
+        <Workout workout={this.props.workout} />
       </div>
 
     )
   }
 }
 
-export default WorkoutPage;
+const mapStateToProps = (state, ownProps) => {
+  console.log(state)
+  const thisWorkout = state.allWorkouts.workouts.find(workout => workout.id === ownProps.match.url.id)
+
+  if (thisWorkout) {
+    return { thisWorkout }
+  } else {
+    return { workout: {} }
+  }
+};
+
+export default connect(mapStateToProps)(WorkoutPage);
