@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Hello from './components/Hello';
@@ -14,7 +14,6 @@ class App extends Component {
   render() {
     return (
       <Router>
-        {/* <div> */}
         <div className="App">
           <Navbar />
           <header className="App-header">
@@ -26,8 +25,8 @@ class App extends Component {
             <Route exact path="/" component={Hello} />
             <Route exact path="/tips" component={TipsPage} />
             <Route exact path="/workouts/new" component={CreateWorkoutForm} />
-            <Route exact path="/workouts" component={WorkoutsPage} />
             <Route exact path="workouts/:id" component={WorkoutPage} />
+            <Route exact path="/workouts" component={WorkoutsPage} />
           {/* </p> */}
         </div>
       </Router>

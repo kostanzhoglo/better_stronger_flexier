@@ -6,7 +6,7 @@ import { getWorkouts } from '../actions/workouts';
 import { connect } from 'react-redux';
 import WorkoutList from '../components/WorkoutList';
 import WorkoutPage from './WorkoutPage';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Patience from '../components/Patience';
 
 
@@ -29,11 +29,8 @@ class WorkoutsPage extends Component {
 }
 
 const mapStateToProps = state => {
-  // console.log(state)
+  console.log(state)
   return {workouts: state.allWorkouts.workouts}
 }
 
 export default connect(mapStateToProps, { getWorkouts })(WorkoutsPage);
-
-
-          // <WorkoutPage allworkouts={this.props.workouts} />
