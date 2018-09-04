@@ -5,9 +5,10 @@ import CreateWorkoutForm from './CreateWorkoutForm';
 import { getWorkouts } from '../actions/workouts';
 import { connect } from 'react-redux';
 import WorkoutList from '../components/WorkoutList';
-import WorkoutPage from './WorkoutPage';
-import { Route, Switch } from 'react-router-dom';
-import Patience from '../components/Patience';
+// import WorkoutPage from './WorkoutPage';
+import { Route } from 'react-router-dom';
+// import Patience from '../components/Patience';
+import Workout from '../components/Workout';
 
 
 class WorkoutsPage extends Component {
@@ -17,12 +18,13 @@ class WorkoutsPage extends Component {
   }
 
   render() {
-      console.log(this.props)
+      // console.log(this.props)
 
       return (
         <div>
             <p>
-              <WorkoutList workouts={this.props.workouts} />
+              <WorkoutList workouts={this.props} />
+              {/* <Workout specific={this.props} /> */}
             </p>
         </div> )
   }

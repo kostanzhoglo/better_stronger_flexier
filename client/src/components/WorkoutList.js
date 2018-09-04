@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import Workout from './Workout';
+import WorkoutPage from '../containers/WorkoutPage';
 
 const WorkoutList = ({ workouts }) => {
-  // console.log(workouts)
-  if (workouts.length > 0) {
-    let workoutLinks = workouts.map((workout) => {
+  console.log(workouts.workouts)
+
+  if (workouts.workouts.length > 0) {
+    let workoutLinks = workouts.workouts.map((workout) => {
       return (
         <div>
           <div key={workout.id}>
@@ -14,7 +16,8 @@ const WorkoutList = ({ workouts }) => {
               {workout.name}
             </Link>
           </div>
-          <Route path={`/workouts/:workoutId`} component={Workout} />
+          <Route path={`/workouts/:workoutId`} component={WorkoutPage} />
+
         </div>
     )})
 
@@ -24,6 +27,7 @@ const WorkoutList = ({ workouts }) => {
         {workoutLinks}
       </div>
     )
+
   } else {
     return (
     <div>
@@ -31,6 +35,7 @@ const WorkoutList = ({ workouts }) => {
     </div>
   )
   }
+
 }
 
 export default WorkoutList;

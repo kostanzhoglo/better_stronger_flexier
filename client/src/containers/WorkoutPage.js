@@ -9,7 +9,7 @@ class WorkoutPage extends Component {
     return (
       <div>
         Hello!
-        <Workout thisWorkout={this.props.workout} />
+        {/* <Workout thisWorkout={this.props.workout} /> */}
       </div>
 
     )

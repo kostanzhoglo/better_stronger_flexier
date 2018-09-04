@@ -3,9 +3,18 @@ import { Card, Col, Row } from 'react-materialize';
 
 
 const Workout = props => {
+    // console.log(props.specific.workouts)
+  // if (props.specific.workouts.length > 0) {
+  //   return (
+  //     <div>
+  //       {props.specific.workouts[3].name}
+  //     </div>
+  //   )
+  // } else {
+
   return (
     <div>
-      <h2>Workout Show Component!</h2>
+      <h2>If only</h2>
     </div>
   )
 }
