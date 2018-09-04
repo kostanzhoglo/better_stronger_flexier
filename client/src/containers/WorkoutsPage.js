@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import Workout from '../components/Workout';
+// import Workout from '../components/Workout';
 import { Row } from 'react-materialize';
 import CreateWorkoutForm from './CreateWorkoutForm';
 import { getWorkouts } from '../actions/workouts';
 import { connect } from 'react-redux';
 import WorkoutList from '../components/WorkoutList';
-import Patience from '../components/Patience';
 import WorkoutPage from './WorkoutPage';
+import { Route } from 'react-router-dom';
+import Patience from '../components/Patience';
 
 
 class WorkoutsPage extends Component {
@@ -16,15 +17,14 @@ class WorkoutsPage extends Component {
   }
 
   render() {
-      console.log(this.props.workouts)
-    return (
-      <div>
-          <p>
-            <WorkoutList workouts={this.props.workouts} />
+      console.log(this.props)
 
-          </p>
-      </div>
-    )
+      return (
+        <div>
+            <p>
+              <WorkoutList workouts={this.props.workouts} />
+            </p>
+        </div> )
   }
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const WorkoutList = ({ workouts }) => {
-  console.log(workouts)
+  // console.log(workouts)
   if (workouts.length > 0) {
     let workoutLinks = workouts.map((workout) => {
       return <div>
