@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const WorkoutLinks = (props) => {
+const WorkoutList = (props) => {
   console.log(props)
   if (props.workouts.length > 0) {
     let workoutLinks = props.workouts.map((workout) => {
@@ -27,4 +27,4 @@ const WorkoutLinks = (props) => {
   }
 }
 
-export default WorkoutLinks;
+export default WorkoutList;

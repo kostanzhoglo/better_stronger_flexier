@@ -4,7 +4,7 @@ import { Row } from 'react-materialize';
 import CreateWorkoutForm from './CreateWorkoutForm';
 import { getWorkouts } from '../actions/workouts';
 import { connect } from 'react-redux';
-import WorkoutLinks from '../components/WorkoutLinks';
+import WorkoutList from '../components/WorkoutList';
 import Patience from '../components/Patience';
 import WorkoutPage from './WorkoutPage';
 
@@ -20,7 +20,7 @@ class WorkoutsPage extends Component {
     return (
       <div>
           <p>
-            <WorkoutLinks workouts={this.props.workouts} />
+            <WorkoutList workouts={this.props.workouts} />
 
           </p>
       </div>
