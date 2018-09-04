@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const WorkoutList = (props) => {
-  console.log(props)
-  if (props.workouts.length > 0) {
-    let workoutLinks = props.workouts.map((workout) => {
-      return <div key={workout.id}>
-          <Link to={`/workouts/${workout.id}`}>
+const WorkoutList = ({ workouts }) => {
+  console.log(workouts)
+  if (workouts.length > 0) {
+    let workoutLinks = workouts.map((workout) => {
+      return <div>
+          <Link
+            key={workout.id}
+            to={`/workouts/${workout.id}`}>
             {workout.name}
           </Link>
         </div>
