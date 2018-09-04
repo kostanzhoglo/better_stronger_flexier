@@ -6,6 +6,7 @@ import { getWorkouts } from '../actions/workouts';
 import { connect } from 'react-redux';
 import WorkoutLinks from '../components/WorkoutLinks';
 import Patience from '../components/Patience';
+import WorkoutPage from './WorkoutPage';
 
 
 class WorkoutsPage extends Component {
@@ -15,10 +16,12 @@ class WorkoutsPage extends Component {
   }
 
   render() {
+      console.log(this.props.workouts)
     return (
       <div>
           <p>
-            <WorkoutLinks allworkouts={this.props.workouts} />
+            <WorkoutLinks workouts={this.props.workouts} />
+
           </p>
       </div>
     )
@@ -31,3 +34,6 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, { getWorkouts })(WorkoutsPage);
+
+
+          // <WorkoutPage allworkouts={this.props.workouts} />

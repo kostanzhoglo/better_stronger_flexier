@@ -5,7 +5,7 @@ import { Card, Col, Row } from 'react-materialize';
 const Workout = props => {
   return (
     <div>
-      My workout shows up!
+      <h2>Workout Show Component!</h2>
     </div>
   )
 }
