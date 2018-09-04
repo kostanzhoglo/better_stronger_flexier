@@ -18,7 +18,7 @@ class WorkoutsPage extends Component {
     return (
       <div>
           <p>
-            <WorkoutLinks workouts={this.props.workouts} />
+            <WorkoutLinks allworkouts={this.props.workouts} />
           </p>
       </div>
     )
@@ -26,7 +26,7 @@ class WorkoutsPage extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state)
+  // console.log(state)
   return {workouts: state.allWorkouts.workouts}
 }
 

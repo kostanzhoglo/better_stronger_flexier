@@ -4,9 +4,11 @@ import Workout from '../components/Workout';
 
 class WorkoutPage extends Component {
   render() {
+    console.log("hello out there")
 
     return (
       <div>
+        Hello!
         <Workout workout={this.props.workout} />
       </div>
 
@@ -15,7 +17,6 @@ class WorkoutPage extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state)
   const thisWorkout = state.allWorkouts.workouts.find(workout => workout.id === ownProps.match.url.id)
 
   if (thisWorkout) {

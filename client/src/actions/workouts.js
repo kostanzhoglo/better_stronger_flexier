@@ -31,7 +31,7 @@ export function getWorkouts() {
       return fetch('http://localhost:3000/api/workouts')
          .then(response => response.json())
          .then(workoutsResp => {
-            console.log(workoutsResp)
+            // console.log(workoutsResp)
             dispatch({ type: 'GET_WORKOUTS', workouts: workoutsResp })
          });
    }
