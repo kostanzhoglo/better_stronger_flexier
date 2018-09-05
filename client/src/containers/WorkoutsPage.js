@@ -11,6 +11,7 @@ import { Route } from 'react-router-dom';
 import Workout from '../components/Workout';
 
 
+
 class WorkoutsPage extends Component {
 
   componentDidMount() {

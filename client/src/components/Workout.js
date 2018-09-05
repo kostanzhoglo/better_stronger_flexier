@@ -3,7 +3,7 @@ import { Card, Col, Row } from 'react-materialize';
 
 
 const Workout = props => {
-  console.log(props)
+  // console.log(props)
 
   return (
     <div>
