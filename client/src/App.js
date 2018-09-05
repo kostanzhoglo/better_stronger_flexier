@@ -9,25 +9,23 @@ import WorkoutsPage from './containers/WorkoutsPage';
 import CreateWorkoutForm from './containers/CreateWorkoutForm';
 import './bootstrap-reboot.css';
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <Navbar />
-          <header className="App-header">
-            <h1 className="App-title">
-              Better, Stronger, Flexier!
-            </h1>
-          </header>
-            <Route exact path="/" component={Hello} />
-            <Route exact path="/tips" component={TipsPage} />
-            <Route path="/workouts" component={WorkoutsPage} />
-            {/* <Route path="/workouts/new" component={CreateWorkoutForm} /> */}
-        </div>
-      </Router>
-    );
-  }
+const App = () => {
+  return (
+    <Router>
+      <div className="App">
+        <Navbar />
+        <header className="App-header">
+          <h1 className="App-title">
+            Better, Stronger, Flexier!
+          </h1>
+        </header>
+          <Route exact path="/" component={Hello} />
+          <Route exact path="/tips" component={TipsPage} />
+          <Route path="/workouts" component={WorkoutsPage} />
+          {/* <Route path="/workouts/new" component={CreateWorkoutForm} /> */}
+      </div>
+    </Router>
+  );
 }
 
 export default App;

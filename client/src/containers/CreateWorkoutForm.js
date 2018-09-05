@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addWorkout } from '../actions/workouts';
+import '../App.css';
 
 class CreateWorkoutForm extends Component {
   constructor(props) {
