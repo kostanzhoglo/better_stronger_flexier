@@ -9,11 +9,17 @@ Fork, and then Clone this repo to your local computer
 
 In terminal
 --Change directory into app folder.  "cd app"  
+
 --Type "bundle install"
+
 --Change directory into client folder.  "cd ../client"
+
 --Type "npm install"
+
 --Change directory back into main folder.  "cd ../"
+
 --Migrate the database with "rake db:Migrate"
+
 --Seed the database (to see example data) with "rake db:seed"
 
 To start the program on your local computer, run "rake start" from your terminal, in the main folder.
