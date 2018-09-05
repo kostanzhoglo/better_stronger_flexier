@@ -24,7 +24,6 @@ class WorkoutsPage extends Component {
         <div>
             <p>
               <WorkoutList workouts={this.props} />
-              {/* <Workout specific={this.props} /> */}
             </p>
         </div> )
   }
@@ -36,6 +35,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, { getWorkouts })(WorkoutsPage);
-
-
-          // <WorkoutPage allworkouts={this.props.workouts} />
