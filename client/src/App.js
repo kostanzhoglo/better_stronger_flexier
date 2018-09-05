@@ -23,7 +23,7 @@ class App extends Component {
             <Route exact path="/" component={Hello} />
             <Route exact path="/tips" component={TipsPage} />
             <Route path="/workouts" component={WorkoutsPage} />
-            <Route exact path="/workouts/new" component={CreateWorkoutForm} />
+            {/* <Route path="/workouts/new" component={CreateWorkoutForm} /> */}
         </div>
       </Router>
     );

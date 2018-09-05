@@ -5,8 +5,8 @@ import CreateWorkoutForm from './CreateWorkoutForm';
 import { getWorkouts } from '../actions/workouts';
 import { connect } from 'react-redux';
 import WorkoutList from '../components/WorkoutList';
-// import WorkoutPage from './WorkoutPage';
-import { Route } from 'react-router-dom';
+import WorkoutPage from './WorkoutPage';
+import { Route, Switch } from 'react-router-dom';
 // import Patience from '../components/Patience';
 import Workout from '../components/Workout';
 
@@ -23,9 +23,11 @@ class WorkoutsPage extends Component {
 
       return (
         <div>
-            <p>
-              <WorkoutList workouts={this.props} />
-            </p>
+            <WorkoutList workouts={this.props} />
+            <Switch>
+              <Route exact path={`${this.props.match.url}/new`} component={CreateWorkoutForm} />
+              <Route path={`${this.props.match.url}/:workoutId`} component={WorkoutPage} />
+            </Switch>
         </div> )
   }
 }

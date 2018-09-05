@@ -16,7 +16,7 @@ const WorkoutList = ({ workouts }) => {
               {workout.name}
             </Link>
           </div>
-          <Route path={`/workouts/:workoutId`} component={WorkoutPage} />
+          {/* <Route path={`/workouts/:workoutId`} component={WorkoutPage} /> */}
 
         </div>
     )})
