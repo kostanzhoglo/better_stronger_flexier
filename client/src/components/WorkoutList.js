@@ -30,9 +30,15 @@ const WorkoutList = ({ workouts }) => {
 
   } else {
     return (
-    <div>
-      Does anyone know what's happening?
-    </div>
+      <div>
+        <p>
+          I would refresh the page if I were you!
+        </p>
+        <p>
+          Go ahead, live a little!
+        </p>
+      </div>
+
   )
   }
 
