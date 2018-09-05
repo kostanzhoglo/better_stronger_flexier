@@ -4,7 +4,7 @@ import Workout from './Workout';
 import WorkoutPage from '../containers/WorkoutPage';
 
 const WorkoutList = ({ workouts }) => {
-  console.log(workouts.workouts)
+  // console.log(workouts.workouts)
 
   if (workouts.workouts.length > 0) {
     let workoutLinks = workouts.workouts.map((workout) => {

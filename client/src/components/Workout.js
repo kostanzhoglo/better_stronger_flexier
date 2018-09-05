@@ -11,10 +11,12 @@ const Workout = props => {
   //     </div>
   //   )
   // } else {
+  console.log(props)
 
   return (
     <div>
-      <h2>If only</h2>
+      <h2>{props.name}</h2>
+      <p>{props.content}</p>
     </div>
   )
 }
