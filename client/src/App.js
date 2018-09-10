@@ -10,6 +10,7 @@ import CreateWorkoutForm from './containers/CreateWorkoutForm';
 import './bootstrap-reboot.css';
 
 const App = () => {
+  console.log(this.props)
   return (
     <Router>
       <div className="App">

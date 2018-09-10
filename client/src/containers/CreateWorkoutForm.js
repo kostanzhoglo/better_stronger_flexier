@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addWorkout } from '../actions/workouts';
+import { Redirect } from 'react-router-dom';
 import '../App.css';
 
 class CreateWorkoutForm extends Component {
@@ -10,7 +11,8 @@ class CreateWorkoutForm extends Component {
     this.state = {
       name: '',
       content: '',
-      completions: ''
+      completions: '',
+      toWorkouts: false,
     }
   }
 
@@ -24,13 +26,24 @@ class CreateWorkoutForm extends Component {
     e.preventDefault()
     this.props.addWorkout({...this.state, completions: 0});
     this.setState({
-      name: '',
-      content: '',
-      completions: ''
+      // name: '',
+      // content: '',
+      // completions: '',
+      toWorkouts: true
+      // react router histopry function
+      // contrast calculator
     })
   }
 
   render() {
+    if (this.state.toWorkouts === true) {
+      return (
+        <div>
+          <Redirect to='/workouts' />
+        </div>
+      )
+    }
+
     return (
       <div>
         <h2>Create a New Workout</h2>
