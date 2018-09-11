@@ -7,6 +7,7 @@ export default function workoutsReducer(state = {
       return {...state, loading: true}
     case 'CREATE_WORKOUT':
       return {...state, workouts: action.workouts}
+      // merge the past workouts before adding this workout
 
     case 'LOADING_WORKOUTS':
       return {...state, loading: true}
