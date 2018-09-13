@@ -1,42 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import WorkoutLink from './WorkoutLink';
 import WorkoutPage from '../containers/WorkoutPage';
 
 
-class WorkoutList extends Component {
+const WorkoutList = ({ workouts }) => {
   // console.log(workouts.workouts)
-  state = {
-    likes: 0
-  }
 
-  handleOnClick = (e) => {
-    e.preventDefault()
-    this.setState(state => {
-      return {likes: state.likes + 1}
-    })
-    // this.setState({
-    //   likes: this.state.likes + 1
-    // })
-  }
-
-  render() {
-
-    if (this.props.workouts.workouts.length > 0) {
-      let workoutLinks = this.props.workouts.workouts.map((workout) => {
+    if (workouts.workouts.length > 0) {
+      let workoutLinks = workouts.workouts.map((workout) => {
         return (
           <div>
             <div key={workout.id}>
-              <WorkoutLink workout={workout} />
               <Link
                 to={`/workouts/${workout.id}`}>
                 {workout.name}
               </Link>
-              <button onClick={this.handleOnClick}>
-                Like
-              </button>
-                  Likes: {this.state.likes}
+              <WorkoutLink workout={workout} />
             </div>
+            <p></p>
             {/* <Route path={`/workouts/:workoutId`} component={WorkoutPage} /> */}
           </div>
       )})
@@ -61,8 +43,6 @@ class WorkoutList extends Component {
 
     )
     }
-
-  }
 }
 
 export default WorkoutList;

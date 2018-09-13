@@ -16,13 +16,16 @@ class WorkoutLink extends Component {
     this.setState({
       likes: this.state.likes + 1
     })
+    // this.setState(state => {
+    //   return {likes: state.likes + 1}
+    // })
   }
 
   render() {
     return (
       <div>
         <button onClick={this.handleOnClick}>Like</button>
-        NEW Likes: {this.state.likes}
+        Likes: {this.state.likes}
       </div>
     )
   }
