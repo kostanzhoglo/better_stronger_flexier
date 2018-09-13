@@ -8,7 +8,7 @@ const Workout = props => {
   return (
     <div>
       <h2>{props.name}</h2>
-      <p class="workoutDisplay">{props.content}</p>
+      <p className="workoutDisplay">{props.content}</p>
     </div>
   )
 }

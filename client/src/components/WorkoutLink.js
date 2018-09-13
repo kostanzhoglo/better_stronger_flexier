@@ -6,16 +6,36 @@ class WorkoutLink extends Component {
     super(props)
 
     this.state = {
-      workout: props.workout,
+      // workout: props.workout,
       likes: 0
     }
   }
 
   handleOnClick = (e) => {
     e.preventDefault();
+    // console.log(this.props.workout)
+
+    const likedWorkout = Object.assign(...this.props.workout, {likes: this.props.workout.likes + 1})
+    fetch(`/api/workouts/${this.props.workout.id}`,
+      {method: 'PUT',
+      // mode: 'no-cors',
+      // credentials: 'same-origin',
+        headers: {
+          // 'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ workout: likedWorkout })
+      })
+      .then(response => response.json())
+      .then(updatedWorkout => this.setState({ likes: updatedWorkout.likes }))
+
+
     this.setState({
       likes: this.state.likes + 1
     })
+
+    // 3 lines BELOW are an ALTERNATE way to write 3 lines ABOVE
+
     // this.setState(state => {
     //   return {likes: state.likes + 1}
     // })
