@@ -4,6 +4,7 @@
   height: 10px;
   padding: 30px;
   margin: 10px;
+  font-family: 'Varela Round', sans-serif;
 }
 
 .App-logo {
@@ -32,6 +33,7 @@
   /* background-color: yellow; */
   background-image: url('./assets/background_imgs/cyclists_1910x1000.jpg');
   background-size: cover;
+  font-family: 'Varela Round', sans-serif;
   /* color: red; */
   /* background-repeat: no-repeat; */
 }
