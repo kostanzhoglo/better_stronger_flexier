@@ -12,7 +12,8 @@ export function addWorkout (workout) {
     dispatch({ type: 'ADDING_WORKOUT' });
     return fetch(`http://localhost:3000/api/workouts`, request)
       .then(response => response.json())
-      .then(workoutsResponse => dispatch({ type: 'CREATE_WORKOUT', payload: workoutsResponse }));
+      .then(workoutsResponse => {
+          dispatch({ type: 'CREATE_WORKOUT', payload: workoutsResponse })});
   }
 }
 
