@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
-import Workout from './Workout';
+import WorkoutLink from './WorkoutLink';
 import WorkoutPage from '../containers/WorkoutPage';
+
 
 class WorkoutList extends Component {
   // console.log(workouts.workouts)
@@ -26,6 +27,7 @@ class WorkoutList extends Component {
         return (
           <div>
             <div key={workout.id}>
+              <WorkoutLink workout={workout} />
               <Link
                 to={`/workouts/${workout.id}`}>
                 {workout.name}
