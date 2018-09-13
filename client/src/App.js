@@ -22,10 +22,12 @@ const App = () => {
           </h1>
         </header>
         <div className="background">
-          <Route exact path="/" component={Hello} />
-          <Route exact path="/tips" component={TipsPage} />
-          <Route path="/workouts" component={WorkoutsPage} />
-          {/* <Route path="/workouts/new" component={CreateWorkoutForm} /> */}
+          <div className="text">
+            <Route exact path="/" component={Hello} />
+            <Route exact path="/tips" component={TipsPage} />
+            <Route path="/workouts" component={WorkoutsPage} />
+            {/* <Route path="/workouts/new" component={CreateWorkoutForm} /> */}
+          </div>
         </div>
       </div>
     </Router>

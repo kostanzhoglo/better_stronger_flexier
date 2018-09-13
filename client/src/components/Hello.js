@@ -4,7 +4,7 @@ const Hello = () => {
     return (
       <div>
         Welcome to Better, Stronger, Flexier
-        <p>
+        <strong><p>
           Never forget a workout again!  Keep track of all your different routines easily right here.  Delete stale workouts that aren't challenging anymore, or add new kinds (HIIT, stretch routines, cardio).
         </p>
         <p>
@@ -12,7 +12,7 @@ const Hello = () => {
         </p>
         <p>
           Check out the tips section for inspiration and helpful pointers!
-        </p>
+        </p></strong>
       </div>
     )
 

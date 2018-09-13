@@ -30,8 +30,9 @@
 
 .background {
   /* background-color: yellow; */
-  background-image: url('./assets/background_imgs/workout_1.jpg');
+  background-image: url('./assets/background_imgs/cyclists_1910x1000.jpg');
   background-size: cover;
+  /* color: red; */
   /* background-repeat: no-repeat; */
 }
 
@@ -39,6 +40,10 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* .text {
+  opacity: 0.9;
+} */
 
 .workoutDisplay {
   white-space: pre;
