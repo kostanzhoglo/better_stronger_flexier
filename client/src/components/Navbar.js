@@ -9,7 +9,7 @@ const Navbar = props => {
       margin: '0 6px 6px',
       background: 'pink',
       textDecoration: 'none',
-      color: 'white',
+      color: 'darkblue',
     }
 
     return (

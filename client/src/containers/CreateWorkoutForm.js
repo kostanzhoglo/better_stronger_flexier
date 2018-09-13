@@ -62,7 +62,7 @@ class CreateWorkoutForm extends Component {
               <label>Exercises / Stretches:</label>
               <textarea
                 rows="20"
-                cols="35"
+                cols="40"
                 name="content"
                 value={this.state.content}
                 onChange={this.handleChange}
