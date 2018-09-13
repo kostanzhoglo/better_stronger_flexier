@@ -14,3 +14,9 @@ const Workout = props => {
 }
 
 export default Workout;
+
+
+
+{/* <Col m={3}>
+  <Card title={props.name}>{props.content}</Card>
+</Col> */}
