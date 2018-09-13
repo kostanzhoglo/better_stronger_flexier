@@ -1,3 +1,3 @@
 class WorkoutSerializer < ActiveModel::Serializer
-  attributes :id, :name, :content, :completions
+  attributes :id, :name, :content, :completions, :likes
 end

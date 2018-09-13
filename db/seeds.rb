@@ -15,7 +15,7 @@ Neck Stretch
 Wrist Stretch
 Hips Stretch
 5 mins meditation
-", completions: 0)
+", completions: 0, likes: 0)
 
 workout2 = Workout.create(name: "Long Run", content: "60 mins run
 Hip Stretch
@@ -24,7 +24,7 @@ Neck Stretch
 100 yds straight legs
 Air Squats: 3 sets, 10 reps
 Calf Stretch
-", completions: 0)
+", completions: 0, likes: 0)
 
 workout3 = Workout.create(name: "Chest", content: "Pushups: 4 sets, 12[3] reps
 Bench Press: 3 sets, 10 reps, 115, 125, 15 lbs
@@ -32,7 +32,7 @@ Incline Bench: 3 sets, 8 reps, 90lbs
 Plank: 4 sets, 60 secs
 Calf Eccentric Dips: 2 sets, 16 reps
 Chest Stretch
-", completions: 0)
+", completions: 0, likes: 0)
 
 workout4 = Workout.create(name: "HIIT Burner!", content: "1 Circuit, 60 secs each spot:
 Pushups
@@ -42,7 +42,7 @@ Mountain Climbers
 Pull-up descends
 Walking Lunges
 Side Curl Sit-ups
-", completions: 0)
+", completions: 0, likes: 0)
 
 workout5 = Workout.create(name: "Stretch and Relax", content: "Calf Massage
 Calf Eccentric Dips 16 reps
@@ -56,4 +56,4 @@ Plank
 Hip Stretch
 Lower Back Hip Extension
 Bridge
-", completions: 0)
+", completions: 0, likes: 0)
