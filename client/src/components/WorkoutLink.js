@@ -6,7 +6,7 @@ class WorkoutLink extends Component {
     super(props)
 
     this.state = {
-      // workout: props.workout,
+      workout: props.workout,
       likes: 0
     }
   }
@@ -16,7 +16,7 @@ class WorkoutLink extends Component {
     // console.log(this.props.workout)
 
     const likedWorkout = Object.assign(...this.props.workout, {likes: this.props.workout.likes + 1})
-    fetch(`/api/workouts/${this.props.workout.id}`,
+    fetch(`http://localhost:3000/api/workouts/${this.props.workout.id}`,
       {method: 'PUT',
       // mode: 'no-cors',
       // credentials: 'same-origin',

@@ -13,6 +13,7 @@ class CreateWorkoutForm extends Component {
       content: '',
       completions: '',
       toWorkouts: false,
+      likes: ''
     }
   }
 
@@ -24,7 +25,7 @@ class CreateWorkoutForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    this.props.addWorkout({...this.state, completions: 0});
+    this.props.addWorkout({...this.state, completions: 0, likes: 0});
     this.setState({
       // name: '',
       // content: '',
