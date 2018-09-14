@@ -7,15 +7,15 @@ class WorkoutLink extends Component {
 
     this.state = {
       workout: props.workout,
-      likes: 0
+      likes: props.workout.likes
     }
   }
 
   handleOnClick = (e) => {
-    e.preventDefault();
-    // console.log(this.props.workout)
+    // e.preventDefault();
+    console.log(this.props.workout)
 
-    const likedWorkout = Object.assign(...this.props.workout, {likes: this.props.workout.likes + 1})
+    const likedWorkout = Object.assign(...this.props.workout, {likes: this.props.workout.likes += 1})
     fetch(`http://localhost:3000/api/workouts/${this.props.workout.id}`,
       {method: 'PUT',
       // mode: 'no-cors',
@@ -28,11 +28,11 @@ class WorkoutLink extends Component {
       })
       .then(response => response.json())
       .then(updatedWorkout => this.setState({ likes: updatedWorkout.likes }))
+    console.log(this.props.workout)
 
-
-    this.setState({
-      likes: this.state.likes + 1
-    })
+    // this.setState({
+    //   likes: this.state.likes + 1
+    // })
 
     // 3 lines BELOW are an ALTERNATE way to write 3 lines ABOVE
 

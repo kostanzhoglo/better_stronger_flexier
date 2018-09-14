@@ -20,6 +20,16 @@ class Api::WorkoutsController < ApplicationController
     render json: @workout
   end
 
+  def update
+    @workout = Workout.find(params[:id])
+    @workout.update(workout_params)
+    if @workout.save
+      render json: @workout
+    else
+      render json: @workout.errors
+    end
+  end
+
   private
 
     def workout_params
