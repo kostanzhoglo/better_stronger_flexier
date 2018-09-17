@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class WorkoutLink extends Component {
+class WorkoutLike extends Component {
 
   constructor(props) {
     super(props)
 
     this.state = {
-      workout: props.workout,
+      // workout: props.workout,
       likes: props.workout.likes
     }
   }
@@ -51,4 +51,4 @@ class WorkoutLink extends Component {
   }
 }
 
-export default WorkoutLink;
+export default WorkoutLike;

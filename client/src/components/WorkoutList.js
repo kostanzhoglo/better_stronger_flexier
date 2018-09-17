@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
-import WorkoutLink from './WorkoutLink';
+import WorkoutLike from './WorkoutLike';
 import WorkoutPage from '../containers/WorkoutPage';
 
 
@@ -16,7 +16,7 @@ const WorkoutList = ({ workouts }) => {
                 to={`/workouts/${workout.id}`}>
                 {workout.name}
               </Link>
-              <WorkoutLink workout={workout} />
+              <WorkoutLike workout={workout} />
             </div>
             <p></p>
             {/* <Route path={`/workouts/:workoutId`} component={WorkoutPage} /> */}

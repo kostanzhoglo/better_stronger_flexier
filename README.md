@@ -18,7 +18,7 @@ In terminal
 
 --Change directory back into main folder.  "cd ../"
 
---Migrate the database with "rake db:Migrate"
+--Migrate the database with "rake db:migrate"
 
 --Seed the database (to see example data) with "rake db:seed"
 
