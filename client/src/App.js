@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 // import marathon from './assets/background_imgs/86_marathon.jpg'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 import Hello from './components/Hello';
 import Navbar from './components/Navbar';
 import TipsPage from './containers/TipsPage';
