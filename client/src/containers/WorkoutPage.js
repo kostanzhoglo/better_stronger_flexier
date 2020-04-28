@@ -4,7 +4,7 @@ import Workout from '../components/Workout';
 
 class WorkoutPage extends Component {
   render() {
-    // console.log(this.props.thisWorkout)
+    console.log(this.props.thisWorkout)
 
     return (
       <div>
@@ -16,7 +16,7 @@ class WorkoutPage extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(ownProps)
+  console.log(ownProps)
   const thisWorkout = state.allWorkouts.workouts.find(workout => workout.id == ownProps.match.params.workoutId)
 
 
