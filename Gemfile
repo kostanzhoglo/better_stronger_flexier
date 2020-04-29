@@ -30,7 +30,7 @@ gem 'rack-cors'
 gem 'foreman', '~> 0.82.0'
 gem 'active_model_serializers'
 gem 'pry'
-gem "loofah", ">= 2.2.3"
+gem "loofah", ">= 2.3.1"
 
 
 group :development, :test do
